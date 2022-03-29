@@ -1,0 +1,38 @@
+.todoitem {
+    background-color: white;
+    width: 90%;
+    height: 200px;
+    padding: 10px;
+    
+
+    &.pending {
+        border-top: 5px solid red;
+    }
+
+    &.inprogress {
+        border-top: 5px solid green;
+    }
+    
+    &.done {
+        border-top: 5px solid green;
+
+        .header {
+            text-decoration: line-through;
+        }
+    }
+
+    .header {
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    .removeCard {
+        text-align: right;
+        display: inline;
+        float: right;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}

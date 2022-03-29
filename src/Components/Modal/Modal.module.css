@@ -1,0 +1,22 @@
+.modal {
+  width: 400px;
+  height: 300px;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 20;
+  text-align: center;
+  padding: 10px;
+}
+
+.modal textarea {
+  width: 90%;
+  height: 100%;
+  max-width: 90%;
+  max-height: 50%;
+  padding: 5px;
+  border: solid 1px;
+}
+/*# sourceMappingURL=Modal.module.css.map */

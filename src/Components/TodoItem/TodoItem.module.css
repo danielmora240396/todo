@@ -1,0 +1,38 @@
+.todoitem {
+  background-color: white;
+  width: 90%;
+  height: 200px;
+  padding: 10px;
+}
+
+.todoitem.pending {
+  border-top: 5px solid red;
+}
+
+.todoitem.inprogress {
+  border-top: 5px solid green;
+}
+
+.todoitem.done {
+  border-top: 5px solid green;
+}
+
+.todoitem.done .header {
+  text-decoration: line-through;
+}
+
+.todoitem .header {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.todoitem .removeCard {
+  text-align: right;
+  display: inline;
+  float: right;
+}
+
+.todoitem .removeCard:hover {
+  cursor: pointer;
+}
+/*# sourceMappingURL=TodoItem.module.css.map */
