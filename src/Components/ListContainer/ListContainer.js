@@ -39,8 +39,9 @@ const ListContainer = () => {
         setTodoList(tempState);
     }
 
-    const removeCard = (index) => {
+    const removeCard = (id) => {
         const tempState = [...todoList];
+        const index = tempState.findIndex(x => x.id === id)
         tempState.splice(index, 1);
         setTodoList(tempState);
     }
