@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import classes from './ListContainer.module.css';
 import Button from '../Util/Button/Button';
 import Backdrop from "../Util/Backdrop/Backdrop";
@@ -8,8 +8,12 @@ import TodoItem from "../TodoItem/TodoItem";
 const ListContainer = () => {
     const [description, setDescription] = useState('')
     const [newToDo, setNewTodo] = useState(false);
-    const [todoList, setTodoList] = useState([]);
+    const [todoList, setTodoList] = useState(localStorage.getItem('todoList') ? JSON.parse(localStorage.getItem('todoList')) : []);
     const [searchTerm, setSearchTerm] = useState('');
+
+    useEffect(() => {
+        localStorage.setItem('todoList', JSON.stringify(todoList));
+    }, [todoList]);
 
     const addItem = (description) => {
         if(description.trim().length > 0){

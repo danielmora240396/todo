@@ -3,7 +3,7 @@ import Button from '../Util/Button/Button';
 
 const Modal = (props) => {
 
-    const onChangeInput = (e) =>{
+    const onChangeInput = (e) => {
         props.setDescription(e.target.value);
     }
 
